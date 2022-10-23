@@ -12,5 +12,5 @@ home: https://github.com/grepory/demo-helm-chart
 sources:
 - https://github.com/grepory/demo-helm-chart/charts/demo-helm-app
 maintainers:
-- name: Greg Poirier
+- name: grepory
   email: greg@notarealemail.com
