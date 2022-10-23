@@ -48,6 +48,9 @@ jobs:
     if: needs.lint-test.outputs.changed == 'true'
     
     steps:
+      - name: Set up chart-testing
+        uses: helm/chart-testing-action@v2.3.1
+  
       - name: Create kind cluster
         uses: helm/kind-action@v1.4.0
     
