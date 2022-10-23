@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "common.fullname" . }}-collector
+  name: {{ include "common.fullname" . }}-app
   namespace: {{ .Release.Namespace }}
   annotations:
-    # When the collector configuration is changed, this value on the Deployment resource
+    # When the configuration is changed, this value on the Deployment resource
     # will change, and the deployment will be rolled. See:
     # https://helm.sh/docs/howto/charts_tips_and_tricks/#automatically-roll-deployments
     checksum/config: {{ include (print $.Template.BasePath "/config_map.yaml") . | sha256sum }}
@@ -14,14 +14,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ include "common.fullname" . }}-collector
+      app: {{ include "common.fullname" . }}-app
   template:
     metadata:
       labels:
 {{ include "common.template-labels" . | indent 8 }}
-        app: {{ include "common.fullname" . }}-collector
+        app: {{ include "common.fullname" . }}-app
     spec:
-      serviceAccountName: {{ include "common.fullname" . }}-collector
+      serviceAccountName: {{ include "common.fullname" . }}-app
       securityContext: {}
       containers:
         - name: app
