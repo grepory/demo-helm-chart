@@ -1,0 +1,9 @@
+remote: origin
+target-branch: main
+chart-dirst:
+  - charts
+chart-repos:
+  - grepory=https://grepory.github.io/demo-helm-chart/
+helm-extra-args: --timeout 300s
+check-version-increment: true
+debug: true
