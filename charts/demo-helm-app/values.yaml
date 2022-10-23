@@ -4,5 +4,5 @@ fullnameOverride:
 demo_helm_app:
   container_image: grepory/demo-helm-chart-app
 
-  config: 
+  config:
     message: "default message"
