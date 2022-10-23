@@ -6,7 +6,7 @@ on:
       - "charts/**"
 
 jobs:
-  changed:
+  lint-test:
     runs-on: ubuntu-latest
     outputs:
       charts: ${{ steps.list-changed.outputs.changed }}
@@ -52,7 +52,7 @@ jobs:
     name: pr-validated
     runs-on: ubuntu-latest
     needs:
-      - install-chart
+      - lint-test
     steps:
       - name: validate
         run: echo "PR OK"
