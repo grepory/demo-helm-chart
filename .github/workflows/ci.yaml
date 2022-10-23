@@ -9,7 +9,7 @@ jobs:
   lint-test:
     runs-on: ubuntu-latest
     outputs:
-      charts: ${{ steps.list-changed.outputs.changed }}
+      changed: ${{ steps.list-changed.outputs.changed }}
     
     steps:
       - name: Checkout
