@@ -21,7 +21,6 @@ spec:
 {{ include "common.template-labels" . | indent 8 }}
         app: {{ include "common.fullname" . }}-app
     spec:
-      serviceAccountName: {{ include "common.fullname" . }}-app
       securityContext: {}
       containers:
         - name: app
