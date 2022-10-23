@@ -28,7 +28,7 @@ spec:
           securityContext: {}
           image: {{ .Values.demo_helm_app.container_image }}
           command:
-            - /app
+            - /demo-helm-app
             - -f /conf/config.yaml
           imagePullPolicy: IfNotPresent
           livenessProbe:
