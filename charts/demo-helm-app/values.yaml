@@ -1,8 +1,8 @@
-nameOverride: # ""
-fullnameOverride: # ""
+nameOverride:
+fullnameOverride:
 
 demo_helm_app:
-  container_image: grepory/demo-helm-chart-app
-  
-  config: 
+  container_image: grepory/demo-helm-chart-app:0.1.0
+
+  config:
     message: "default message"

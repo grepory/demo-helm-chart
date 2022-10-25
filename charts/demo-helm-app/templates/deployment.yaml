@@ -21,24 +21,24 @@ spec:
 {{ include "common.template-labels" . | indent 8 }}
         app: {{ include "common.fullname" . }}-app
     spec:
-      serviceAccountName: {{ include "common.fullname" . }}-app
       securityContext: {}
       containers:
         - name: app
           securityContext: {}
           image: {{ .Values.demo_helm_app.container_image }}
           command:
-            - app
-            - -f /conf/config.yaml
+            - /demo-helm-app
+            - -f
+            - /conf/config.yaml
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
               path: /message
-              port: 80
+              port: 8080
           readinessProbe:
             httpGet:
               path: /message
-              port: 80
+              port: 8080
           volumeMounts:
             - mountPath: /conf
               name: demo-helm-app-configmap
