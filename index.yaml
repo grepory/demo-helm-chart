@@ -3,6 +3,25 @@ entries:
   demo-helm-app:
   - apiVersion: v1
     appVersion: "1"
+    created: "2022-10-25T18:40:17.377900816Z"
+    description: Demo Helm App deploy
+    digest: 3edc4ea219fc7a866949fcb07bd3fda88ab2f86e2cf4b90cf3540f9d321cd9ba
+    home: https://github.com/grepory/demo-helm-chart
+    keywords:
+    - demo
+    - helm
+    - golang
+    maintainers:
+    - email: greg@notarealemail.com
+      name: grepory
+    name: demo-helm-app
+    sources:
+    - https://github.com/grepory/demo-helm-chart/charts/demo-helm-app
+    urls:
+    - https://github.com/grepory/demo-helm-chart/releases/download/demo-helm-app-0.1.1/demo-helm-app-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1"
     created: "2022-10-23T19:18:04.859175972Z"
     description: Demo Helm App deploy
     digest: e10566c0d5c6a652d7fff7171453d2e9c9546837b46b0db728e41783dc245fdf
