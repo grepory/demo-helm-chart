@@ -6,4 +6,4 @@ metadata:
 {{ include "common.labels" . | indent 4 }}
 data:
   config: |
-{{ include "config" . | indent 8}}
+{{ include "app_config" . | indent 8}}
