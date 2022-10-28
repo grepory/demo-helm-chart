@@ -2,5 +2,5 @@
   template for default configuration
 */}}
 {{- define "app_config" -}}
-message: {{ .Values.demo_helm_app.config.message }}
+message: {{ .Values.config.message }}
 {{- end -}}
